@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Haroun AL Mounayar</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+          "three/addons/loaders/GLTFLoader.js": "https://unpkg.com/three@0.161.0/examples/jsm/loaders/GLTFLoader.js",
+          "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.161.0/examples/jsm/controls/OrbitControls.js",
+          "three/addons/libs/stats.module": "https://unpkg.com/three@0.161.0/examples/jsm/libs/stats.module"
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script >
+        tailwind.config = {
+          darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body class=" bg-orange-100 dark:bg-neutral-800">
+    <main class="grid justify-center">
+        <div class="col-start-1 row-start-1">
+            {% include navbar.html %}
+        </div>
+        <div class="flex flex-col col-start-1 justify-center items-center row-start-1">
+            <div class="">
+                {% include rudeusdesk.html %}
+            </div>
+            <div class="justify-self-center mt-[-80]">
+                {% include quickpres.html %}
+            </div>
+            <div class="w-1/2 md:max-w-screen-lg max-md:w-full p-5 align-item-center">
+                {% include work.html %}
+            </div>
+            <div class="w-1/2 md:max-w-screen-lg max-md:w-full p-5 align-item-center">
+                {% include bio.html %}
+            </div>
+            <div class="w-1/2 md:max-w-screen-lg max-md:w-full p-5 align-item-center">
+                {% include hobbies.html %}
+            </div>
+        </div>
+    </main>
+    {% include footercustom.html %}
+
+</body>
+
+</html>
